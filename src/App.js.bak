@@ -1,0 +1,178 @@
+import React from 'react';
+import './App.scss';
+import logo from './assets/logo.png';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'react-bootstrap';
+import { Navbar, Nav, NavDropdown, Form, FormControl, Button, Image, Card, Container, Row, Col, Media } from 'react-bootstrap';
+import hacktiv8 from './assets/hacktiv8.jpg';
+import photoProfile from './assets/photo-profile.jpeg';
+
+
+const Index = () => {
+  return (
+    <div className='fill-body'>
+      <div>
+        <Navbar className='navbar shadow navbar-fixed-top'>
+          <Container>
+            <Navbar.Brand href="#home">
+              <img 
+                src={logo} 
+                alt='Logo' 
+                width="150"
+                className="d-inline-block align-top"
+              />
+            </Navbar.Brand>
+            <Navbar.Toggle className='text white' aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="mr-auto">
+                <Nav.Link className='text white' href="#home">Create Meetup</Nav.Link>
+                <Nav.Link className='text white' href="#link">Explore</Nav.Link>
+              </Nav>
+              <Form inline>
+                <Button variant='light' id='shadow'>Login</Button>
+              </Form>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+      </div>
+      <div className='page-column'>
+        <Container>
+          <Card className='shadow'>
+            <Card.Body>
+              <Media>
+                <img 
+                  src={hacktiv8} 
+                  alt='Logo' 
+                  width="200"
+                  className="mr-3"
+                />
+                <Media.Body>
+                  <h1 className='mb-3'>Hacktiv8 Meetup</h1>
+                  <table className='mb-3'>
+                    <tr>
+                      <td width='100px'>Location</td>
+                      <td>Jakarta, Indonesia</td>
+                    </tr>
+                    <tr>
+                      <td>Members</td>
+                      <td>1,078</td>
+                    </tr>
+                    <tr>
+                      <td>Organizers</td>
+                      <td>Adhy Wiranata</td>
+                    </tr>
+                  </table>
+                  <Button variant='primary' id='shadow' style={{width: 200}} >Join Us</Button>
+                </Media.Body>
+              </Media>
+            </Card.Body>
+          </Card>
+
+          <h1 className='mt-4 mb-3'>Next Meetup</h1>
+          <Card className='shadow'>
+            <Card.Body>
+              <h5 className='mb-3'>Awesome meetup and event</h5>
+              <p className='mb-3'>25 January 2019</p>
+              <p className='mb-3'>Hello, JavaScript & Node.js Ninjas! <br/>  
+                                  Get ready for our montty meetup JakartaJS! This will be our fifth meetup of 2018! <br/>
+                                  The meetup format will contain some short stories and technical talks. <br />
+                                  If you have a short announcement you'd like to share with the audience, you may do so during open mic announcements. <br /> <br />
+                                  Remember to bring a photo ID to get through building Security. <br/> <br/> 
+                                  ----------------- <br/> <br/> 
+                                  See you there! <br/> <br/> 
+                                  Best,Hengki, Giovanni, Sofian, Riza, Agung The JakartaJS Organizers
+              </p>
+            </Card.Body>
+          </Card>
+
+          <div className='mt-4 mb-3'>
+            <Row noGutters>
+              <h1 className='mr-auto'>About Meetup</h1>
+              <a className='float-right mt-auto mb-auto' href='#'>See All</a>
+            </Row>
+          </div>
+          
+          <div>
+            <p>Come and meet other developer interested in the JavaScript and it's library in the Greater Jakarta area. <br /> </p>
+            <p>Twitter: @JakartaJS and we use the hashtag #jakartajs. </p>
+          </div>
+
+          <h1 className='mt-4 mb-3'>Members</h1>
+          <Card className='shadow mb-4'>
+            <Card.Body>
+              <Media>
+                <Image 
+                  src={photoProfile} 
+                  alt='Logo' 
+                  width="100"
+                  height="100"
+                  className="mr-3"
+                  roundedCircle
+                />
+                <Media.Body className='mt-auto mb-auto'>
+                  <h4><b>Organizers</b></h4>
+                  <Row noGutters>
+                    <Col>Aldhy Wiranata	</Col>
+                    <Col xs={10}>4 Others</Col>
+                  </Row>
+                </Media.Body>
+              </Media>
+            </Card.Body>
+          </Card>
+
+          <div className='mt-4 mb-3'>
+            <Row noGutters>
+              <h1 className='mr-auto'>Past Meetups</h1>
+              <a className='float-right mt-auto mb-auto' href='#'>See All</a>
+            </Row>
+          </div>
+          <div>
+            <Row noGutters>
+              <Col>
+                <Card className='shadow mb-4 ml-3 mr-3'>
+                  <Card.Body>
+                    <h5><b>27 November 2017</b></h5>
+                    <div className='ruler'></div>
+                    <p className='mt-3 mb-3'>#39 JakartaJS April Meetup with kumparan <br /></p>
+                    <p className='mb-3'>139 <a className='text-muted'>went</a></p>
+                    <Button variant='primary' id='shadow' style={{width: 90, height: 40}} >View</Button>
+                  </Card.Body>
+                </Card>
+              </Col>
+              <Col>
+                <Card className='shadow mb-4 ml-3 mr-3'>
+                  <Card.Body>
+                    <h5><b>27 November 2017</b></h5>
+                    <div className='ruler'></div>
+                    <p className='mt-3 mb-3'>#39 JakartaJS April Meetup with kumparan <br /></p>
+                    <p className='mb-3'>139 <a className='text-muted'>went</a></p>
+                    <Button variant='primary' id='shadow' style={{width: 90, height: 40}} >View</Button>
+                  </Card.Body>
+                </Card>
+              </Col>
+              <Col>
+                <Card className='shadow mb-4 ml-3 mr-3'>
+                  <Card.Body>
+                    <h5><b>27 November 2017</b></h5>
+                    <div className='ruler'></div>
+                    <p className='mt-3 mb-3'>#39 JakartaJS April Meetup with kumparan <br /></p>
+                    <p className='mb-3'>139 <a className='text-muted'>went</a></p>
+                    <Button variant='primary' id='shadow' style={{width: 90, height: 40}} >View</Button>
+                  </Card.Body>
+                </Card>
+              </Col>
+            </Row>
+          </div>
+          <div className='ruler mt-5 mb-5' /> 
+          <div className='mb-5'>
+            <center>
+              <h5>Copyright Hacktiv8 2018</h5>
+            </center>
+          </div>
+        </Container>
+      </div>
+    </div>
+  );
+};
+
+export default Index
